@@ -1,0 +1,9 @@
+{
+  "code-runner.runInTerminal": true,
+  "code-runner.saveFileBeforeRun": true,
+  "code-runner.ignoreSelection": true,
+  "code-runner.clearPreviousOutput": true,
+  "code-runner.executorMap": {
+    "cpp": "call \"$workspaceRoot\\run-current-cpp.bat\" $fullFileName"
+  }
+}
