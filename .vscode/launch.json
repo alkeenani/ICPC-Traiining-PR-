@@ -2,16 +2,25 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "C++ Debug with Files",
+      "name": "C++ Debug - Windows",
       "type": "cppdbg",
       "request": "launch",
-      "program": "${workspaceFolder}/main.exe",
-      "args": [],
+      "program": "${workspaceFolder}\\build\\${fileBasenameNoExtension}.exe",
+      "args": ["<", "${workspaceFolder}\\input.txt"],
       "cwd": "${workspaceFolder}",
-      "preLaunchTask": "C++: Build",
+      "preLaunchTask": "C++: Build (Debug)",
       "MIMode": "gdb",
       "miDebuggerPath": "C:/msys64/ucrt64/bin/gdb.exe",
       "externalConsole": true
+    },
+    {
+      "name": "C++ Debug - Mac",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/${fileBasenameNoExtension}",
+      "stdio": ["${workspaceFolder}/input.txt", null, null],
+      "cwd": "${workspaceFolder}",
+      "preLaunchTask": "C++: Build (Debug)"
     }
   ]
 }

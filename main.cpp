@@ -2,8 +2,15 @@
 using namespace std;
 
 int main() {
-    cout<<"Hello World!";
-    cout<<"Hello World!";
-    cout<<"Hello World!";
+    int n,m,sum=0;
+    cin>>n>>m;
+    for (int i = n; i <= m; i++)
+    {
+        cout<< i<<endl;
+        sum+=i;
+
+    }
+    cout<<sum<<endl;
+    
     return 0;
 }

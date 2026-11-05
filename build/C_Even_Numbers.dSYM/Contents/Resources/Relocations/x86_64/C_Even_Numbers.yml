@@ -1,0 +1,5 @@
+---
+triple:          'x86_64-apple-darwin'
+binary-path:     '/Volumes/New Volume/C++ Project/build/C_Even_Numbers'
+relocations:     []
+...

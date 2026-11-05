@@ -1,0 +1,20 @@
+#!/bin/bash
+set -euo pipefail
+
+SRC="${1:-}"
+if [ -z "$SRC" ]; then
+    echo "Usage: run.sh <file.cpp>"
+    exit 1
+fi
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+BUILD="$ROOT/build"
+EXE="$BUILD/$(basename "${SRC%.cpp}")"
+
+mkdir -p "$BUILD"
+[ -f "$ROOT/input.txt" ] || : > "$ROOT/input.txt"
+
+clang++ -std=c++17 -Wall -Wextra -g "$SRC" -o "$EXE"
+"$EXE" < "$ROOT/input.txt" > "$ROOT/output.txt"
+
+echo "Finished. Check output.txt"
