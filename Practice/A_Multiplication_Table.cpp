@@ -8,5 +8,8 @@ int main(){
     cout<<i<<" x "<< num<< " = " << i*num<<endl;
   }
   
+  
   return 0;
+
+
 }

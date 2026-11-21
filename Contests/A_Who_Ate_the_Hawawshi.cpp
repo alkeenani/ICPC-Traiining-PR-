@@ -1,0 +1,40 @@
+#include<iostream>
+#include<string>
+using namespace std;
+int main(){
+  string n;
+
+    cin>>n;
+
+  long long sum=0;
+
+    for (int i = 0; i < n.length(); i++){
+        sum += n[i] - '0';
+    }
+
+    if (sum%3==0)
+    {
+      cout << "Elhenawy El_MOo Elgendy"<<endl;
+
+    }
+    else{
+      cout << "Elhenawy"<<endl;
+
+    }
+    
+  
+    // if (n%3==0)
+    // {
+    //   cout << "Elhenawy El_MOo Elgendy"<<endl;
+    // }
+    // else {
+    //   cout << "Elhenawy"<<endl;
+
+    // }
+    
+
+
+
+  return 0;
+
+}
